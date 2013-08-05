@@ -16,7 +16,7 @@ public class tests {
 		driver = new FirefoxDriver();
 		loginpage = new LoginPage(driver);
 //		mainpage = new MainPage(driver);
-		driver.get("http://demo131.dataart.com/trade/buy");
+		driver.get("i.ua");
 	}
 	
 	@AfterMethod public void aftermethod() {
