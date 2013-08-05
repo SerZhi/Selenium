@@ -1,0 +1,15 @@
+<suite name="My Test Suite" thread-count="10">
+  <test name="My_test">
+
+    <classes>
+    <class name="Step1.tests"/>
+	<class name="Step2.tests"/>
+	<class name="Step3.Tests.tests"/>
+	<class name="Step4.Tests.tests"/>
+	<class name="Step41.Tests.tests"/>
+	<class name="Step42.Tests.tests"/>
+	<class name="Step5.Tests.tests"/>
+  </classes>
+
+  </test>
+</suite>

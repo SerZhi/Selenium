@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" name="Failed suite [My Test Suite]">
+  <test name="My_test(failed)">
+    <classes>
+      <class name="Step41.Tests.tests">
+        <methods>
+          <include name="aftermethod"/>
+          <include name="beforemethod"/>
+          <include name="login_logout"/>
+          <include name="login_sendemail"/>
+        </methods>
+      </class> <!-- Step41.Tests.tests -->
+      <class name="Step4.Tests.tests">
+        <methods>
+          <include name="login_sendemail"/>
+          <include name="aftermethod"/>
+          <include name="beforemethod"/>
+          <include name="login_logout"/>
+        </methods>
+      </class> <!-- Step4.Tests.tests -->
+      <class name="Step5.Tests.tests">
+        <methods>
+          <include name="login_sendemail"/>
+          <include name="login_logout"/>
+          <include name="beforemethod"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- Step5.Tests.tests -->
+      <class name="Step3.Tests.tests">
+        <methods>
+          <include name="beforemethod"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- Step3.Tests.tests -->
+      <class name="Step42.Tests.tests">
+        <methods>
+          <include name="beforemethod"/>
+          <include name="login_logout"/>
+          <include name="login_sendemail"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- Step42.Tests.tests -->
+      <class name="Step2.tests">
+        <methods>
+          <include name="beforemethod"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- Step2.tests -->
+    </classes>
+  </test> <!-- My_test(failed) -->
+</suite> <!-- Failed suite [My Test Suite] -->

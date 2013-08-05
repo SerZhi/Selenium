@@ -1,0 +1,51 @@
+<project basedir="." default="runTestNG" name="Sample of Ant file for TestNG">
+ 
+  <!-- Define <testng> task -->
+  <taskdef name="testng" classname="org.testng.TestNGAntTask">
+    <classpath>
+      <pathelement location="lib/testng.jar"/>
+    </classpath>
+  </taskdef>
+  
+  <!-- Directory name where the TestNG report will be saved. -->
+  <property name="testng.output.dir" value="testng_output"/>
+      <path id="classpath">
+        <fileset dir="lib" includes="**/*.jar"/>
+    </path>
+ 
+  <!-- Directory path of compiled classes(i.e *.class) -->
+  <path id="classes">
+     <pathelement location="build"/>
+  </path>
+ 
+  <!--
+  Target to run TestNG. It will run according to what are defined in testng.xml.
+  The report will be saved at .../testng_output/index.html.
+  -->
+ <target name="runTestNG" depends="compile">
+     <mkdir dir="${testng.output.dir}"/>
+    <testng outputdir="${testng.output.dir}" classpathref="classes"> 
+ 	  <xmlfileset dir="." includes="testng.xml"/>
+	  <classpath>
+                <path refid="classpath"/>
+            </classpath>
+   </testng>
+  </target>
+ 
+ 
+  <target name="compile">  
+		
+		<delete dir="build"/>    
+        <mkdir dir="build"/>
+        <javac srcdir="src" destdir="./build">
+		<classpath>
+			<path path="lib/*.jar"/>
+			<path refid="classpath"/>
+            </classpath>
+		</javac>
+           
+  </target>
+	
+	
+ 
+</project>
